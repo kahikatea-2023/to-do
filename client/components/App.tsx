@@ -1,12 +1,12 @@
 import { useEffect } from 'react'
 import { useAppDispatch, useAppSelector } from '../hooks'
-import { fetchFruits } from '../slices/fruits'
+import { fetchTodos } from '../slices/todos'
 
 function App() {
-  const fruits = useAppSelector((state) => state.fruits)
+  const todos = useAppSelector((state) => state.todos)
   const dispatch = useAppDispatch()
   useEffect(() => {
-    dispatch(fetchFruits())
+    dispatch(fetchTodos())
   }, [dispatch])
 
   return (
@@ -14,8 +14,8 @@ function App() {
       <div className="app">
         <h1>To-Do Full Stack!</h1>
         <ul>
-          {fruits.map((fruit) => (
-            <li key={fruit}>{fruit}</li>
+          {todos.map((todo) => (
+            <li key={todo}>{todo}</li>
           ))}
         </ul>
       </div>
