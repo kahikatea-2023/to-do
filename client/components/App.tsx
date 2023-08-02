@@ -12,15 +12,14 @@ function App() {
   return (
     <>
       <div className="layout">
-        <div className="app">
+        <div className="form">
           <h1>What Do You Have To Do?</h1>
-          <form>
-            {/* <label htmlFor="todo">First name:</label> */}
+          <form className="input">
             <input type="text" id="todo" name="todo"></input>
-            <button type="submit">Add</button>
           </form>
+          <button type="submit">Add</button>
         </div>
-        <div className="app">
+        <div className="list">
           <h1>To Do!</h1>
           <ul>
             {todos.map((todo) => (
