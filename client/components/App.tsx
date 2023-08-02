@@ -11,13 +11,23 @@ function App() {
 
   return (
     <>
-      <div className="app">
-        <h1>To-Do Full Stack!</h1>
-        <ul>
-          {todos.map((todo) => (
-            <li key={todo}>{todo}</li>
-          ))}
-        </ul>
+      <div className="layout">
+        <div className="app">
+          <h1>What Do You Have To Do?</h1>
+          <form>
+            {/* <label htmlFor="todo">First name:</label> */}
+            <input type="text" id="todo" name="todo"></input>
+            <button type="submit">Add</button>
+          </form>
+        </div>
+        <div className="app">
+          <h1>To Do!</h1>
+          <ul>
+            {todos.map((todo) => (
+              <li key={todo}>{todo}</li>
+            ))}
+          </ul>
+        </div>
       </div>
     </>
   )
