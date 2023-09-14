@@ -23,7 +23,7 @@ function App() {
           <h1>To Do!</h1>
           <ul>
             {todos.map((todo) => (
-              <li key={todo}>{todo}</li>
+              <li key={todo}>- {todo}</li>
             ))}
           </ul>
         </div>
